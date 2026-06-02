@@ -1,11 +1,10 @@
 package view;
 
 import dao.UsuarioDAO;
-import model.Usuario;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
+import model.Usuario;
 
 public class TelaCadastroUsuario extends JFrame {
 
@@ -34,9 +33,18 @@ public class TelaCadastroUsuario extends JFrame {
         btnCadastrar = new JButton("Cadastrar");
         btnCadastrar.setBounds(120,180,120,30);
 
-        add(new JLabel("Nome")).setBounds(40,40,80,25);
-        add(new JLabel("Login")).setBounds(40,80,80,25);
-        add(new JLabel("Senha")).setBounds(40,120,80,25);
+        JLabel lblNome = new JLabel("Nome");
+        lblNome.setBounds(40,40,80,25);
+
+        JLabel lblLogin = new JLabel("Login");
+        lblLogin.setBounds(40,80,80,25);
+
+        JLabel lblSenha = new JLabel("Senha");
+        lblSenha.setBounds(40,120,80,25);
+
+        add(lblNome);
+        add(lblLogin);
+        add(lblSenha);
 
         add(txtNome);
         add(txtLogin);

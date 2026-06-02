@@ -66,7 +66,9 @@ public class TelaLogin extends JFrame {
 
                     dispose();
 
-                    new TelaPrincipal();
+                    new TelaPrincipal(
+                        loginService.getUsuarioDAO()
+                    );
 
                 } catch (LoginInvalidoException ex) {
 

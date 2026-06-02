@@ -34,4 +34,9 @@ public class LoginService {
 
         return usuario;
     }
+
+    public UsuarioDAO getUsuarioDAO() {
+            return usuarioDAO;
+        }
+
 }
