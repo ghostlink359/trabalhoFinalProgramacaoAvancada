@@ -1,12 +1,11 @@
 package view;
 
-import service.LoginService;
-import model.Usuario;
 import exception.LoginInvalidoException;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
+import model.Usuario;
+import service.LoginService;
 
 public class TelaLogin extends JFrame {
 

@@ -1,28 +1,33 @@
 package view;
 
+import javax.swing.*;
 import model.Mapa;
 
-import javax.swing.*;
-
 public class TelaMapa extends JFrame {
-
-    private JTextArea area;
 
     public TelaMapa(Mapa mapa) {
 
         setTitle("Visualização de Mapa");
-        setSize(500,300);
+        setSize(700,500);
         setLocationRelativeTo(null);
 
-        area = new JTextArea();
+        JLabel titulo =
+                new JLabel(
+                        mapa.getNome()
+                );
 
-        area.setText(
-                "Mapa: " + mapa.getNome()
-                + "\nRegião: "
-                + mapa.getRegiao()
+        titulo.setHorizontalAlignment(
+                SwingConstants.CENTER
         );
 
-        add(new JScrollPane(area));
+        ImageIcon imagem =
+                new ImageIcon("mapa.jpg");
+
+        JLabel lblImagem =
+                new JLabel(imagem);
+
+        add(titulo, "North");
+        add(lblImagem, "Center");
 
         setVisible(true);
     }
